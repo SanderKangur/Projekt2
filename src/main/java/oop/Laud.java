@@ -1,5 +1,6 @@
 package oop;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.lang.reflect.Array;
@@ -12,14 +13,18 @@ import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.effect.Bloom;
 import javafx.scene.effect.Reflection;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontPosture;
@@ -46,6 +51,77 @@ public class Laud extends Application {
         algus.setStrokeWidth(20);
         väli.get(0).setRing(algus);
         juur.getChildren().add(algus);
+
+        //TÄRING, lol ma ei oska neid ära ühendada ainult
+        Rectangle täring = new Rectangle(700, 50 ,80, 80);
+        täring.setFill(Color.BLACK);
+
+        //täringuvise 1:
+        /*Circle täpp1 = new Circle(740, 90,5, Color.WHITE);
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp1);*/
+
+        //täringuvise 2:
+        /*Circle täpp2 = new Circle(720, 90, 5, Color.WHITE);
+        Circle täpp3 = new Circle(760, 90, 5, Color.WHITE);
+
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp2);
+        juur.getChildren().add(täpp3);*/
+
+        //täringuvise 3:
+        /*Circle täpp1 = new Circle(740, 90,5, Color.WHITE);
+        Circle täpp2 = new Circle(720, 90, 5, Color.WHITE);
+        Circle täpp3 = new Circle(760, 90, 5, Color.WHITE);
+
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp1);
+        juur.getChildren().add(täpp2);
+        juur.getChildren().add(täpp3);*/
+
+        //täringuvise 4:
+        /*Circle täpp4 = new Circle(720, 70,5,Color.WHITE);
+        Circle täpp5 = new Circle(760, 70, 5, Color.WHITE);
+        Circle täpp6 = new Circle(720, 110, 5, Color.WHITE);
+        Circle täpp7 = new Circle(760, 110, 5, Color.WHITE);
+
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp4);
+        juur.getChildren().add(täpp5);
+        juur.getChildren().add(täpp6);
+        juur.getChildren().add(täpp7);*/
+
+        //täringuvise 5:
+        Circle täpp1 = new Circle(740, 90,5, Color.WHITE);
+        Circle täpp4 = new Circle(720, 70,5,Color.WHITE);
+        Circle täpp5 = new Circle(760, 70, 5, Color.WHITE);
+        Circle täpp6 = new Circle(720, 110, 5, Color.WHITE);
+        Circle täpp7 = new Circle(760, 110, 5, Color.WHITE);
+
+
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp1);
+        juur.getChildren().add(täpp4);
+        juur.getChildren().add(täpp5);
+        juur.getChildren().add(täpp6);
+        juur.getChildren().add(täpp7);
+
+        //täringuvise 6;
+        /*Circle täpp2 = new Circle(720, 90, 5, Color.WHITE);
+        Circle täpp3 = new Circle(760, 90, 5, Color.WHITE);
+        Circle täpp4 = new Circle(720, 70,5,Color.WHITE);
+        Circle täpp5 = new Circle(760, 70, 5, Color.WHITE);
+        Circle täpp6 = new Circle(720, 110, 5, Color.WHITE);
+        Circle täpp7 = new Circle(760, 110, 5, Color.WHITE);
+
+        juur.getChildren().add(täring);
+        juur.getChildren().add(täpp2);
+        juur.getChildren().add(täpp3);
+        juur.getChildren().add(täpp4);
+        juur.getChildren().add(täpp5);
+        juur.getChildren().add(täpp6);
+        juur.getChildren().add(täpp7);*/
+
         int n = 1;
         for (int j = 0; j < 7; j++) {
             for (int i = 1; i < 10; i++) {
@@ -119,6 +195,8 @@ public class Laud extends Application {
         lõpp.setStrokeWidth(20);
         väli.get(64).setRing(lõpp);
         juur.getChildren().add(lõpp);
+
+
 
         /********************************** MÄNG **************************************/
 
