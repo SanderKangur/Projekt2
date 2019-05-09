@@ -1,0 +1,16 @@
+Tere!
+
+Mängu võitmiseks on kaks võimalust: 
+1) Kogu kokku kõigi 6 kategooria nupud
+2) Jõua esimesena lõppu
+Kategooriad on: Matemaatika, Meedia, Ajalugu, Geograafia, Teadus, Varia
+
+Mänguväli: 
+Väljal on kategooriatele vastavad ruudud küsimuste jaoks, shoots/ladders
+ja tühjad ruudud, kus midagi ei juhtu - kokku 56 ruutu
+
+Mängukäik: 
+Mäng algab esimese mängija täringu veeretusega
+Iga raundi lõpus väljastatakse hetkeskoor
+
+EDU!
