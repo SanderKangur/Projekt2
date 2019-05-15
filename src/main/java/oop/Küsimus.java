@@ -4,8 +4,9 @@ import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLOutput;
 
- class Küsimus {
+class Küsimus {
     //Võtab küsimuse ja kontrollib kohe ära, kas vastus on õige
 
      static void väljastaKüsimus(File f1, File f2,Nupud nupud, Mängija mängija) throws Exception {
@@ -17,6 +18,7 @@ import java.nio.file.Paths;
         if(kategooria.equalsIgnoreCase("Üles")){
             JOptionPane.showMessageDialog(new JFrame(), "Liigud järgmisele tühjale ruudule!");
             mängija.setMängija(mängija.getMängija()+4);
+
         }
         else if(kategooria.equalsIgnoreCase("Alla")){
             JOptionPane.showMessageDialog(new JFrame(), "Liigud eelmisele tühjale ruudule!");
@@ -28,37 +30,41 @@ import java.nio.file.Paths;
         else {
             JOptionPane.showMessageDialog(new JFrame("Küsimus"), kategooria);
             String sisestatakse = JOptionPane.showInputDialog(null, küss, kategooria, JOptionPane.QUESTION_MESSAGE); //Mängija vastab küsimusele
-            if (sisestatakse.equalsIgnoreCase(põhi.getVas())) { //Kontrollib vastuse õigsust
-                System.out.println("Õige");
-                if (kategooria.equalsIgnoreCase("Matemaatika")) {
-                    nupud.setMata(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Matemaatika nupu!");
+            try {
+                if (sisestatakse.equalsIgnoreCase(põhi.getVas())) { //Kontrollib vastuse õigsust
+                    System.out.println("Õige");
+                    if (kategooria.equalsIgnoreCase("Matemaatika")) {
+                        nupud.setMata(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Matemaatika nupu!");
+                    }
+                    if (kategooria.equalsIgnoreCase("Meedia")) {
+                        nupud.setMeedia(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Meedia nupu!");
+                    }
+                    if (kategooria.equalsIgnoreCase("Ajalugu")) {
+                        nupud.setAja(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Ajaloo nupu!");
+                    }
+                    if (kategooria.equalsIgnoreCase("Geograafia")) {
+                        nupud.setGeo(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Geograafia nupu!");
+                    }
+                    if (kategooria.equalsIgnoreCase("Teadus")) {
+                        nupud.setTeadus(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Teaduse nupu!");
+                    }
+                    if (kategooria.equalsIgnoreCase("Varia")) {
+                        nupud.setVaria(true);
+                        JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Varia nupu!");
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Vastasid valesti!");
+                    //System.out.println("Vale");
+                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Õige vastus oleks olnud : " + põhi.getVas());
+                    //System.out.println("Õige vastus oleks olnud: " + põhi.getVas());
                 }
-                if (kategooria.equalsIgnoreCase("Meedia")) {
-                    nupud.setMeedia(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Meedia nupu!");
-                }
-                if (kategooria.equalsIgnoreCase("Ajalugu")) {
-                    nupud.setAja(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Ajaloo nupu!");
-                }
-                if (kategooria.equalsIgnoreCase("Geograafia")) {
-                    nupud.setGeo(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Geograafia nupu!");
-                }
-                if (kategooria.equalsIgnoreCase("Teadus")) {
-                    nupud.setTeadus(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Teaduse nupu!");
-                }
-                if (kategooria.equalsIgnoreCase("Varia")) {
-                    nupud.setVaria(true);
-                    JOptionPane.showMessageDialog(new JFrame("Mäng"), "Said Varia nupu!");
-                }
-            } else {
-                JOptionPane.showMessageDialog(new JFrame("Mäng"), "Vastasid valesti!");
-                //System.out.println("Vale");
-                JOptionPane.showMessageDialog(new JFrame("Mäng"), "Õige vastus oleks olnud : " + põhi.getVas());
-                //System.out.println("Õige vastus oleks olnud: " + põhi.getVas());
+            } catch(NullPointerException e){
+                System.out.println("Ei vastanud küsimusele");
             }
         }
     }
