@@ -2,13 +2,16 @@ package oop;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.image.BufferedImage;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import javafx.application.Application;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
@@ -33,7 +36,9 @@ import javafx.scene.text.FontPosture;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 
@@ -204,7 +209,7 @@ public class Laud extends Application {
         Nupud nupud2 = new Nupud(false, false, false, false, false, false);
         Nupud nupud3 = new Nupud(false, false, false, false, false, false);
 
-        Scene stseen1 = new Scene(juur, 800, 600, Color.LAVENDERBLUSH);  //stseen, tagatausta värv
+        Scene stseen1 = new Scene(juur, 800, 600, Color.LAVENDER);  //stseen, tagatausta värv
 
         tekst9.setOnMouseEntered(event -> edasi.setFill(Color.GREEN));
         tekst9.setOnMouseExited(event -> edasi.setFill(Color.RED));
@@ -371,6 +376,7 @@ public class Laud extends Application {
 
         peaLava.setTitle("Laud");
         peaLava.setScene(mänguStseen());
+        peaLava.getIcons().add(new Image("file:icon.png"));
         peaLava.setMaximized(true);
         peaLava.show();
     }
