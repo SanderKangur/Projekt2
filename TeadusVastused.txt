@@ -11,6 +11,6 @@ fotosüntees
 70%
 mitokonder
 hügromeeter
-temperatuuist
+temperatuurist
 Saturn
 Apollo

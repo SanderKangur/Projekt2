@@ -204,7 +204,7 @@ public class Laud extends Application {
         Nupud nupud2 = new Nupud(false, false, false, false, false, false);
         Nupud nupud3 = new Nupud(false, false, false, false, false, false);
 
-        Scene stseen1 = new Scene(juur, 800, 600);  // luuakse stseen
+        Scene stseen1 = new Scene(juur, 800, 600, Color.LAVENDERBLUSH);  //stseen, tagatausta värv
 
         tekst9.setOnMouseEntered(event -> edasi.setFill(Color.GREEN));
         tekst9.setOnMouseExited(event -> edasi.setFill(Color.RED));
@@ -217,17 +217,17 @@ public class Laud extends Application {
                 //Meetod 'küsi' on lükatud n-ö ühe võrra edasi, et pärast täringu veeretamist stseen updateks ennast!
 
                 if(!mängija1.isOnKäinud()){
-                    käi(mängija1, nupud1, väli, juur, täring);
+                    käi(mängija1, väli, juur, täring);
                     mängija1.setOnKäinud(true);
                 }
                 else if(!mängija2.isOnKäinud()) {
                     küsi(mängija1, nupud1, väli);
-                    käi(mängija2, nupud2, väli, juur, täring);
+                    käi(mängija2, väli, juur, täring);
                     mängija2.setOnKäinud(true);
                 }
                 else if(!mängija3.isOnKäinud()) {
                     küsi(mängija2, nupud2, väli);
-                    käi(mängija3, nupud3, väli, juur, täring);
+                    käi(mängija3, väli, juur, täring);
                     mängija3.setOnKäinud(true);
                 }
                 else {
@@ -240,11 +240,11 @@ public class Laud extends Application {
 
                     JOptionPane.showMessageDialog(new JFrame("Mäng"),
                             "Mängija1 nupud: " + nupud1.toString() + '\n' +
-                                    "Mängija1 asub " + mängija1.getMängija() + ". ruudul" + '\n' + '\n' +
+                                    "Mängija1 asub " + mängija1.getMängija() + ". ringil" + '\n' + '\n' +
                                     "Mängija2 nupud: " + nupud2.toString() + '\n' +
-                                    "Mängija2 asub " + mängija2.getMängija() + ". ruudul" + '\n' + '\n' +
+                                    "Mängija2 asub " + mängija2.getMängija() + ". ringil" + '\n' + '\n' +
                                     "Mängija3 nupud: " + nupud3.toString() + '\n' +
-                                    "Mängija3 asub " + mängija3.getMängija() + ". ruudul");
+                                    "Mängija3 asub " + mängija3.getMängija() + ". ringil");
                 }
 
             }
@@ -319,7 +319,7 @@ public class Laud extends Application {
         }
     }
 
-    public static void käi(Mängija mängija, Nupud nupud, List<Koht> väli, Group juur, Rectangle täring){
+    public static void käi(Mängija mängija, List<Koht> väli, Group juur, Rectangle täring){
 
         /********************************** KÄIMINE **************************************/
 
@@ -345,7 +345,7 @@ public class Laud extends Application {
 
         /********************************** KÜSIMINE **************************************/
 
-        JOptionPane.showMessageDialog(new JFrame("Mäng"), mängija.getNimi() + " asub " + mängija.getMängija() + ". ruudul");
+        JOptionPane.showMessageDialog(new JFrame("Mäng"), mängija.getNimi() + " asub " + mängija.getMängija() + ". ringil");
         try {
             Küsimus.väljastaKüsimus(väli.get(mängija.getMängija()).getKüs(), väli.get(mängija.getMängija()).getVas(), nupud, mängija);
         } catch (Exception e) {

@@ -1,9 +1,7 @@
 package oop;
 
-import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 
 class Mängija extends Circle {
     //Sisaldab mängija praegust asukohta

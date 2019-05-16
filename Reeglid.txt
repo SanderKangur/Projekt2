@@ -6,11 +6,14 @@ Mängu võitmiseks on kaks võimalust:
 Kategooriad on: Matemaatika, Meedia, Ajalugu, Geograafia, Teadus, Varia
 
 Mänguväli: 
-Väljal on kategooriatele vastavad ruudud küsimuste jaoks, shoots/ladders
-ja tühjad ruudud, kus midagi ei juhtu - kokku 56 ruutu
+Väljal on kategooriatele vastavad värvilised ringid küsimuste jaoks,
+'+' märgiga ringid saadavad 4 kohta edasi ja '-' märgiga 4 kohta tagasi,
+tühjad hallid ringid, kus midagi ei juhtu
+ning must ring alguse ja lõpu jaoks - kokku 65 ringi
 
 Mängukäik: 
 Mäng algab esimese mängija täringu veeretusega
 Iga raundi lõpus väljastatakse hetkeskoor
+Kui nupp 'EDASI' on punane, siis vajuta seda jätkamiseks
 
 EDU!

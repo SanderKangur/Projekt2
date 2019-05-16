@@ -14,12 +14,15 @@ class Reeglid {
             pw.println("Kategooriad on: Matemaatika, Meedia, Ajalugu, Geograafia, Teadus, Varia");
             pw.println();
             pw.println("Mänguväli: ");
-            pw.println("Väljal on kategooriatele vastavad ruudud küsimuste jaoks, shoots/ladders");
-            pw.println("ja tühjad ruudud, kus midagi ei juhtu - kokku 56 ruutu");
+            pw.println("Väljal on kategooriatele vastavad värvilised ringid küsimuste jaoks,");
+            pw.println("'+' märgiga ringid saadavad 4 kohta edasi ja '-' märgiga 4 kohta tagasi,");
+            pw.println("tühjad hallid ringid, kus midagi ei juhtu");
+            pw.println("ning must ring alguse ja lõpu jaoks - kokku 65 ringi");
             pw.println();
             pw.println("Mängukäik: ");
             pw.println("Mäng algab esimese mängija täringu veeretusega");
             pw.println("Iga raundi lõpus väljastatakse hetkeskoor");
+            pw.println("Kui nupp 'EDASI' on punane, siis vajuta seda jätkamiseks");
             pw.println();
             pw.println("EDU!");
         }

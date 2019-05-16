@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.SQLOutput;
 
 class Küsimus {
     //Võtab küsimuse ja kontrollib kohe ära, kas vastus on õige
