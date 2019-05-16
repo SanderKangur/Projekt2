@@ -24,6 +24,11 @@ class Küsimused {
             pw.println("Egiptuse kõrgem ametkond u 3000 a eKr");
             pw.println("Kelle auks peeti Kreekas Olümpiamänge?");
             pw.println("Vanakreeka filosoof ja matemaatik(omab oma teoreemi).");
+            pw.println("Kus sündis Adolf Hitler?");
+            pw.println("Kus mõrvati John F. Kennedy?");
+            pw.println("Saja-aastane Sõda toimus Prantsusmaa ja ... vahel");
+
+
 
         }
     }
@@ -39,7 +44,18 @@ class Küsimused {
             pw.println("Vaadeldava maa-ala pinnavormide kogum on pinnamood ehk...");
             pw.println("Füüsiline geograafia");
             pw.println("Püsivad tuuled, mis suvel ja talvel puhuvad vastassuunas.");
-       }
+            pw.println("Milline ookean on USA ida rannikul?");
+            pw.println("Maailma kõrgeim mägi maailmas.");
+            pw.println("Pikim jõgi Ameerikas.");
+            pw.println("Suurim kõrb maailmas.");
+            pw.println("Millises osariigis asub Suur Kanjon?");
+            pw.println("Mis on pindalalt kõige väiksem riik?");
+
+
+
+
+
+        }
     }
 
      static void väljastaMatemaatika() throws Exception {
@@ -89,6 +105,12 @@ class Küsimused {
             pw.println("H2SO3 ehk...");
             pw.println("Mida on õhus 78%?");
             pw.println("Protsess, mille käigus elusorganismid muudavad päikeseenergia keemiliseks energiaks.");
+            pw.println("Mitu protsenti Maast on kaetud veega?");
+            pw.println("Raku energiat tootev organell.");
+            pw.println("Õhuniiskuse mõõtja.");
+            pw.println("Tähtede värvuse erinevus on tingitud...");
+            pw.println("Asteroidid pöörlevad ümber kahe planeedi, milleks on Marss ja ...");
+            pw.println("Esimene kosmoselaev Kuul.");
         }
     }
 

@@ -27,6 +27,9 @@ class Vastused {
             pw.println("vaaraod");
             pw.println("Zeusi");
             pw.println("Pythagorase");
+            pw.println("Austrias");
+            pw.println("Dallases");
+            pw.println("Inglismaa");
 
         }
     }
@@ -42,6 +45,12 @@ class Vastused {
             pw.println("reljeef");
             pw.println("loodusgeograafia");
             pw.println("mussoonid");
+            pw.println("Atlandi ookean");
+            pw.println("Mount Everest");
+            pw.println("Missouri");
+            pw.println("Sahara");
+            pw.println("Arizona");
+            pw.println("Vatikan");
 
         }
     }
@@ -89,6 +98,12 @@ class Vastused {
             pw.println("väävlishape");
             pw.println("lämmastik");
             pw.println("fotosüntees");
+            pw.println("70%");
+            pw.println("mitokonder");
+            pw.println("hügromeeter");
+            pw.println("temperatuurist");
+            pw.println("Saturn");
+            pw.println("Apollo");
 
         }
     }
