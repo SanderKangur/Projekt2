@@ -26,7 +26,7 @@ class Vastused {
             pw.println("sumerid");
             pw.println("vaaraod");
             pw.println("Zeusi");
-            pw.println("Pythagorase");
+            pw.println("Pythagoras");
             pw.println("Austrias");
             pw.println("Dallases");
             pw.println("Inglismaa");

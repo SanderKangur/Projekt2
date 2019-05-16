@@ -374,7 +374,7 @@ public class Laud extends Application {
         JOptionPane.showMessageDialog(new JFrame("INFO"), "Tutvu reeglitega failist Reeglid.txt");
         JOptionPane.showMessageDialog(new JFrame("INFO"), "MÄNGIMA!");
 
-        peaLava.setTitle("Laud");
+        peaLava.setTitle("Very Hard Question Game");
         peaLava.setScene(mänguStseen());
         peaLava.getIcons().add(new Image("file:icon.png"));
         peaLava.setMaximized(true);
